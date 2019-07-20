@@ -33,7 +33,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'Storage' do |storage|
     storage.ios.deployment_target = '8.0'
-    # storage.tvos.deployment_target = '11.0' Disabled; one of the dependencies doesn't support tvOS.
+    storage.tvos.deployment_target = '11.0'
     storage.public_header_files = 'Storage/FirebaseStorageUI/*.h'
     storage.source_files = 'Storage/FirebaseStorageUI/*.{h,m}'
     storage.dependency 'Firebase/Storage', '~> 6.0'
