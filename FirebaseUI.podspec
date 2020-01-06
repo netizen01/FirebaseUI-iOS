@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'FirebaseUI'
-  s.version      = '8.0.3'
+  s.version      = '8.4.0'
   s.summary      = 'UI binding libraries for Firebase.'
   s.homepage     = 'https://github.com/firebase/FirebaseUI-iOS'
   s.license      = { :type => 'Apache 2.0', :file => 'LICENSE' }
@@ -121,7 +121,7 @@ Pod::Spec.new do |s|
     google.public_header_files = 'GoogleAuth/FirebaseGoogleAuthUI/*.h'
     google.source_files = 'GoogleAuth/FirebaseGoogleAuthUI/*.{h,m}'
     google.dependency 'FirebaseUI/Auth'
-    google.dependency 'GoogleSignIn', '~> 4.0'
+    google.dependency 'GoogleSignIn', '~> 5.0'
     google.resource_bundle = {
       'FirebaseGoogleAuthUI' => ['GoogleAuth/FirebaseGoogleAuthUI/**/*.{png,lproj}']
     }
@@ -133,6 +133,9 @@ Pod::Spec.new do |s|
     oauth.public_header_files = 'OAuth/FirebaseOAuthUI/*.h'
     oauth.source_files = 'OAuth/FirebaseOAuthUI/*.{h,m}'
     oauth.dependency 'FirebaseUI/Auth'
+    oauth.resource_bundle = {
+      'FirebaseOAuthUI' => ['OAuth/FirebaseOAuthUI/**/*.{png,lproj}']
+    }
     oauth.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/FirebaseUI/FirebaseOAuthUI' }
   end
 
